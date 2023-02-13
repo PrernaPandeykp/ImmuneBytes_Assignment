@@ -8,7 +8,7 @@ from rest_framework.views import APIView
 # Create your views here.
 
 class RegisterView(APIView):
-    def post(self,request):
+    def post(self, request):
         try:
             serializer = UserSerializer(data = request.data)
             if not serializer.is_valid():
